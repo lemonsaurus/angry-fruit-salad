@@ -1,16 +1,20 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/Weapons/Projectiles/Projectile.tscn" type="PackedScene" id=1]
 [ext_resource path="res://art/weapons/pineapple.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Weapons/Projectiles/Pineapple.gd" type="Script" id=3]
+[ext_resource path="res://scenes/Effects/Explosion.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 24.0
-height = 35.0661
+radius = 9.42681
+height = 15.3657
 
-[node name="Projectile" instance=ExtResource( 1 )]
+[node name="PineappleProjectile" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+destroy_effect = ExtResource( 4 )
 
 [node name="Sprite" parent="." index="0"]
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" parent="." index="1"]

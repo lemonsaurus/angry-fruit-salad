@@ -3,10 +3,31 @@ extends KinematicBody2D
 
 var turn_speed = 9
 var max_move_speed = 500
-var acceleration = .1
+var acceleration = .3
 var friction = 0.1
 var velocity = Vector2.ZERO
 onready var debug_line = $debug_line
+
+func _ready():
+	
+	#Connect to UI events
+	Events.connect("equip_weapon", self, "weapon_added")
+	Events.connect("unequip_weapon", self, "weapon_removed")
+	
+	#Tell the game who the player is (so other's can reference)
+	yield(get_tree(), 'idle_frame')
+	Events.set_player(self)
+	
+
+func weapon_added(_slot, _weapon):
+	#When a weapon is added, lower max speed and acceleration
+	acceleration-=.055
+	max_move_speed -= 30
+	
+func weapon_removed(_slot):
+	#When a weapon is removed, increase max speed and acceleration
+	acceleration+=.1
+	max_move_speed += 50
 
 func _physics_process(delta):
 	#Set directional movement
