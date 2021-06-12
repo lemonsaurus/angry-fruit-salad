@@ -14,3 +14,4 @@ name = "Weapon 1"
 tooltip = "Weapon 1"
 texture = SubResource( 1 )
 node = ExtResource( 2 )
+id = 0
