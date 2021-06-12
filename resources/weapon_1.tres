@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://resources/weapon.gd" type="Script" id=1]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/icon_red.png-2c850d5491cc19ea5e8267a18964546b.stex"
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource( 1 )
+name = "Weapon 1"
+tooltip = "Weapon 1"
+texture = SubResource( 1 )

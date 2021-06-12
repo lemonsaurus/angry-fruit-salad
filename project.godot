@@ -8,10 +8,24 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Resource",
+"class": "WeaponData",
+"language": "GDScript",
+"path": "res://resources/weapon.gd"
+} ]
+_global_script_class_icons={
+"WeaponData": ""
+}
+
 [application]
 
 config/name="Gmtkjam- 2021"
 config/icon="res://icon.png"
+
+[autoload]
+
+Events="*res://auto_load/Events.gd"
 
 [physics]
 
