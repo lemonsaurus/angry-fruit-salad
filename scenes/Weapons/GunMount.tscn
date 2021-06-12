@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/Weapons/BananaWeapon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Weapons/GunMount.gd" type="Script" id=2]
+
+[node name="GunMount" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Weapons" type="Node2D" parent="."]
+
+[node name="Holder1" type="Position2D" parent="Weapons"]
+position = Vector2( 0, -96 )
+rotation = -0.785398
+
+[node name="Holder2" type="Position2D" parent="Weapons"]
+position = Vector2( 60, -60 )
+rotation = -0.383972
+
+[node name="Holder3" type="Position2D" parent="Weapons"]
+position = Vector2( 96, 0 )
+
+[node name="BananaWeapon3" parent="Weapons/Holder3" instance=ExtResource( 1 )]
+script = null
+
+[node name="Holder4" type="Position2D" parent="Weapons"]
+position = Vector2( 60, 60 )
+rotation = 0.383972
+
+[node name="Holder5" type="Position2D" parent="Weapons"]
+position = Vector2( 0, 96 )
+rotation = 0.785398
