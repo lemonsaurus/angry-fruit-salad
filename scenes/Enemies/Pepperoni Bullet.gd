@@ -15,3 +15,9 @@ func _physics_process(delta):
 	move = move.move_toward(look_vector, delta)
 	move = move.normalized() * speed
 	position += move
+
+
+func _on_Pepperoni_Bullet_body_entered(body):
+	if body.name == 'Player':
+		body.queue_free()
+	queue_free()

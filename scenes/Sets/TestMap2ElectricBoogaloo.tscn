@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://ui/UI.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://art/environment/colored_transparent_packed.png" type="Texture" id=3]
+[ext_resource path="res://scenes/Enemies/enemy.tscn" type="PackedScene" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -45,7 +46,11 @@ current = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource( 1 )]
-margin_left = 597.278
-margin_top = -47.3216
-margin_right = 597.278
-margin_bottom = -47.3216
+margin_left = 756.018
+margin_top = -25.098
+margin_right = 756.018
+margin_bottom = -25.098
+rect_scale = Vector2( 0.75, 0.75 )
+
+[node name="Enemy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 913.619, 545.35 )
