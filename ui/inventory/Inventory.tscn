@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://resources/weapon.gd" type="Script" id=1]
 [ext_resource path="res://resources/weapon_2.tres" type="Resource" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/Weapons/BananaWeapon.tscn" type="PackedScene" id=5]
 [ext_resource path="res://art/weapons/Bananagun_icon.png" type="Texture" id=6]
 [ext_resource path="res://resources/weapon_1.tres" type="Resource" id=7]
+[ext_resource path="res://resources/weapon_4.tres" type="Resource" id=8]
 
 [sub_resource type="Resource" id=1]
 resource_local_to_scene = true
@@ -81,6 +82,7 @@ margin_left = 228.0
 margin_top = 76.0
 margin_right = 300.0
 margin_bottom = 148.0
+weapon_data = ExtResource( 8 )
 
 [node name="ItemSlot8" parent="GridContainer" instance=ExtResource( 3 )]
 margin_top = 152.0

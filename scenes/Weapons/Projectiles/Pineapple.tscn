@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/Weapons/Projectiles/Projectile.tscn" type="PackedScene" id=1]
 [ext_resource path="res://art/weapons/pineapple.png" type="Texture" id=2]
@@ -9,7 +9,12 @@
 radius = 4.59127
 height = 9.29978
 
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 4.59195
+height = 10.5195
+
 [node name="PineappleProjectile" instance=ExtResource( 1 )]
+collision_mask = 1
 script = ExtResource( 3 )
 destroy_effect = ExtResource( 4 )
 
@@ -23,3 +28,13 @@ shape = SubResource( 1 )
 
 [node name="VisibilityNotifier2D" parent="." index="2"]
 scale = Vector2( 2.79925, 1.83495 )
+
+[node name="Hitbox" parent="." index="3"]
+collision_layer = 4
+collision_mask = 64
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+rotation = 1.5708
+shape = SubResource( 2 )
+
+[editable path="Hitbox"]

@@ -3,9 +3,9 @@
 [ext_resource path="res://art/effects/dirt_03.png" type="Texture" id=1]
 
 [sub_resource type="Gradient" id=1]
-colors = PoolColorArray( 1, 0.876526, 0.0703125, 1, 0.53125, 0.401875, 0.0581055, 1 )
+colors = PoolColorArray( 0.870117, 0.572296, 0.180141, 1, 0.741211, 0.638448, 0.0579071, 1 )
 
-[node name="Explosion" type="CPUParticles2D"]
+[node name="PineappleGrapeSplat" type="CPUParticles2D"]
 lifetime = 2.0
 explosiveness = 0.95
 texture = ExtResource( 1 )

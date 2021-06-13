@@ -7,7 +7,10 @@ var speed = 5
 
 
 func _ready():
+	randomize()
 	look_vector = player.position - global_position
+	var rand_scale = rand_range(0.75, 1.25)
+	scale = Vector2(rand_scale, rand_scale)
 	
 	
 func _physics_process(delta):

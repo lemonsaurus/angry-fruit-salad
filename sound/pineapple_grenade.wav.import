@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/pineapple_grenade.wav-67fe47de9a99d840802478e8e1886375.sample"
+
+[deps]
+
+source_file="res://sound/pineapple_grenade.wav"
+dest_files=[ "res://.import/pineapple_grenade.wav-67fe47de9a99d840802478e8e1886375.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
