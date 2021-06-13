@@ -4,11 +4,11 @@
 [ext_resource path="res://scenes/Enemies/enemy.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 8.16817
-height = 20.9693
+radius = 5.9412
+height = 28.2476
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 560.0
+radius = 505.103
 
 [node name="Enemy" type="KinematicBody2D" groups=[
 "enemy",

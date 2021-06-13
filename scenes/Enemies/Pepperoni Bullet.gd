@@ -3,7 +3,7 @@ extends Area2D
 var move = Vector2.ZERO
 var look_vector = Vector2.ZERO
 var player = null
-var speed = 15
+var speed = 5
 
 
 func _ready():

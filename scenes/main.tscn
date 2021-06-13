@@ -12,8 +12,5 @@ position = Vector2( 159.651, -99.8265 )
 [node name="Player" parent="TestMap" instance=ExtResource( 2 )]
 position = Vector2( 378.606, 331.359 )
 
-[node name="Camera2D" type="Camera2D" parent="TestMap/Player"]
-current = true
-
 [node name="Enemy" parent="TestMap" instance=ExtResource( 1 )]
-position = Vector2( 837.03, 168.635 )
+position = Vector2( 126.876, 609.085 )

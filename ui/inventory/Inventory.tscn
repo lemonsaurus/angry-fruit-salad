@@ -15,6 +15,7 @@ name = "Weapon 1"
 tooltip = "Weapon 1"
 texture = ExtResource( 6 )
 node = ExtResource( 5 )
+id = 0
 
 [node name="Inventory" type="Control"]
 __meta__ = {
