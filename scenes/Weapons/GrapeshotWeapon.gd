@@ -4,6 +4,8 @@ var number_projectiles = 10
 var spread_factor = .4
 
 func shoot(direction):
+	if shot_delay.time_left != 0:
+		return
 	randomize()
 	for i in range(number_projectiles):
 		#Spawn projectile and configure direction/rotation
@@ -14,3 +16,4 @@ func shoot(direction):
 		proj.global_position = $Muzzle.global_position
 		proj.rotation = proj.velocity.angle()
 		#yield(get_tree(), 'idle_frame')
+	shot_delay.start()

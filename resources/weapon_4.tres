@@ -1,14 +1,14 @@
 [gd_resource type="Resource" load_steps=4 format=2]
 
 [ext_resource path="res://resources/weapon.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://scenes/Weapons/PineappleWeapon.tscn" type="PackedScene" id=3]
+[ext_resource path="res://art/weapons/Pineshot@4x_icon.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Weapons/PineappleGrapeshot.tscn" type="PackedScene" id=3]
 
 [resource]
 resource_local_to_scene = true
 script = ExtResource( 1 )
-name = "Ananas"
-tooltip = "Ananas tooltip"
+name = "GrapePine"
+tooltip = "GrapePine"
 texture = ExtResource( 2 )
 node = ExtResource( 3 )
-id = 5
+id = 4

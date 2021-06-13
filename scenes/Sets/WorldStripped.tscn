@@ -1,11 +1,10 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=59 format=2]
 
 [ext_resource path="res://art/environment/GrassBackground.png" type="Texture" id=1]
 [ext_resource path="res://art/environment/CliffTileset.png" type="Texture" id=2]
 [ext_resource path="res://art/environment/DirtTileset.png" type="Texture" id=3]
 [ext_resource path="res://scenes/Player/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://ui/UI.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/Enemies/enemy.tscn" type="PackedScene" id=6]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -45,6 +44,18 @@
 1/shape_one_way_margin = 0.0
 1/shapes = [  ]
 1/z_index = 0
+
+[sub_resource type="NavigationPolygon" id=51]
+vertices = PoolVector2Array( 8, 8, 8, 8, 32, 8, 32, 32, 8, 32 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ) ]
+
+[sub_resource type="NavigationPolygon" id=52]
+vertices = PoolVector2Array( 0, 8, 0, 8, 32, 8, 32, 32, 0, 32 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ) ]
+
+[sub_resource type="NavigationPolygon" id=53]
+vertices = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -203,7 +214,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 0/autotile/tile_size = Vector2( 32, 32 )
 0/autotile/spacing = 0
 0/autotile/occluder_map = [  ]
-0/autotile/navpoly_map = [  ]
+0/autotile/navpoly_map = [ Vector2( 0, 0 ), SubResource( 51 ), Vector2( 1, 0 ), SubResource( 52 ), Vector2( 1, 1 ), SubResource( 53 ) ]
 0/autotile/priority_map = [  ]
 0/autotile/z_index_map = [  ]
 0/occluder_offset = Vector2( 0, 0 )
@@ -512,7 +523,6 @@ outlines = [ PoolVector2Array( -414.422, -221.425, -414.485, 221.748, -384.246, 
 [node name="World" type="Node2D"]
 
 [node name="BG_Grass" type="Sprite" parent="."]
-visible = false
 texture = ExtResource( 1 )
 offset = Vector2( 160, 90 )
 region_enabled = true

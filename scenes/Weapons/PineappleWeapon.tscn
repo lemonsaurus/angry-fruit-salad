@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/Weapons/Weapon.tscn" type="PackedScene" id=1]
 [ext_resource path="res://art/weapons/Pinethrower3x.png" type="Texture" id=2]
 [ext_resource path="res://scenes/Weapons/Projectiles/Pineapple.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sound/pineapple_grenade.wav" type="AudioStream" id=4]
 
 [node name="PineappleWeapon" instance=ExtResource( 1 )]
 projectile_type = ExtResource( 3 )
@@ -14,3 +15,7 @@ offset = Vector2( 151, -170 )
 
 [node name="Muzzle" parent="." index="1"]
 position = Vector2( 18.3471, -8.9846 )
+
+[node name="AudioStreamPlayer" parent="." index="3"]
+stream = ExtResource( 4 )
+volume_db = -10.0

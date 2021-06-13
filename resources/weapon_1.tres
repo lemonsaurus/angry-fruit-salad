@@ -7,8 +7,8 @@
 [resource]
 resource_local_to_scene = true
 script = ExtResource( 1 )
-name = "Weapon 1"
-tooltip = "Weapon 1"
+name = "BananaBeam"
+tooltip = "BananaBeam"
 texture = ExtResource( 3 )
 node = ExtResource( 2 )
 id = 0

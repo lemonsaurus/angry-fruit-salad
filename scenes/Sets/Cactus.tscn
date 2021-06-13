@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://art/environment/Cactus Green@4x.png" type="Texture" id=1]
+[ext_resource path="res://art/environment/Cactus Yellow@4x.png" type="Texture" id=2]
+[ext_resource path="res://art/environment/Cactus Pink@4x.png" type="Texture" id=3]
+[ext_resource path="res://Cactus.gd" type="Script" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+
+[node name="Cactus" type="StaticBody2D"]
+position = Vector2( 0, -56.9461 )
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -2.94314, 55.0787 )
+shape = SubResource( 1 )
+
+[node name="art" type="Node2D" parent="."]
+position = Vector2( 0, 33.2154 )
+scale = Vector2( 0.1, 0.1 )
+
+[node name="Cactus Green4x" type="Sprite" parent="art"]
+position = Vector2( 10.7604, 211.676 )
+texture = ExtResource( 1 )
+offset = Vector2( 0, -350 )
+
+[node name="Cactus Pink4x" type="Sprite" parent="art"]
+position = Vector2( 10.7604, 211.676 )
+texture = ExtResource( 3 )
+offset = Vector2( 0, -350 )
+
+[node name="Cactus Yellow4x" type="Sprite" parent="art"]
+position = Vector2( 10.7604, 211.676 )
+texture = ExtResource( 2 )
+offset = Vector2( 0, -350 )
