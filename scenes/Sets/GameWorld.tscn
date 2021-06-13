@@ -120,3 +120,8 @@ position = Vector2( 680.175, 618.991 )
 position = Vector2( 118.087, 538.108 )
 current = true
 zoom = Vector2( 0.8, 0.8 )
+
+[node name="reload_timer" type="Timer" parent="."]
+wait_time = 1.5
+
+[connection signal="timeout" from="reload_timer" to="." method="reload_current_scene"]

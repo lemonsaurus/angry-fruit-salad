@@ -22,5 +22,6 @@ func _physics_process(delta):
 
 func _on_Pepperoni_Bullet_body_entered(body):
 	if body.name == 'Player':
-		body.queue_free()
+		body.die()
+		Events.reload_scene()
 	queue_free()

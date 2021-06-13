@@ -66,4 +66,11 @@ func update_facing(direction):
 	#moving down
 	elif direction.y > 0:
 		p_sprite.frame = 0
-	
+
+func die():
+	var audio = $AudioStreamPlayer
+	remove_child(audio)
+	get_tree().current_scene.add_child(audio)
+	audio.play()
+	queue_free()
+

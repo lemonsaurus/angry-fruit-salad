@@ -7,6 +7,7 @@ var spread_factor = .5
 func shoot(direction):
 	if shot_delay.time_left != 0:
 		return
+	$AudioStreamPlayer.play()
 	randomize()
 	for i in range(number_projectiles):
 		#Spawn projectile and configure direction/rotation
