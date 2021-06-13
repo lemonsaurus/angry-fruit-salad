@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/Weapons/Projectiles/Projectile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Weapons/Projectiles/BananaBeam.gd" type="Script" id=2]
+[ext_resource path="res://art/weapons/banana_beam.png" type="Texture" id=3]
+
+[sub_resource type="RayShape2D" id=1]
+length = 500.0
+
+[node name="BananaBeam" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Sprite" parent="." index="0"]
+scale = Vector2( 1, 0.25 )
+texture = ExtResource( 3 )
+centered = false
+offset = Vector2( 0, -16 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 0, 32 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+rotation = -1.5708
+shape = SubResource( 1 )
+
+[node name="beam_ray" type="RayCast2D" parent="." index="3"]
+enabled = true
+cast_to = Vector2( 1000, 0 )
+
+[node name="Timer" type="Timer" parent="." index="4"]
+wait_time = 0.1
+one_shot = true
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_BananaBeam_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="queue_free"]

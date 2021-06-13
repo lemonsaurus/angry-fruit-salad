@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://resources/weapon.gd" type="Script" id=1]
 [ext_resource path="res://resources/weapon_2.tres" type="Resource" id=2]
 [ext_resource path="res://ui/inventory/ItemSlot.tscn" type="PackedScene" id=3]
+[ext_resource path="res://resources/weapon_3.tres" type="Resource" id=4]
 [ext_resource path="res://scenes/Weapons/BananaWeapon.tscn" type="PackedScene" id=5]
-[ext_resource path="res://icon_red.png" type="Texture" id=6]
+[ext_resource path="res://art/weapons/Bananagun_icon.png" type="Texture" id=6]
+[ext_resource path="res://resources/weapon_1.tres" type="Resource" id=7]
 
 [sub_resource type="Resource" id=1]
 resource_local_to_scene = true
@@ -57,18 +59,21 @@ weapon_data = ExtResource( 2 )
 [node name="ItemSlot4" parent="GridContainer" instance=ExtResource( 3 )]
 margin_top = 76.0
 margin_bottom = 148.0
+weapon_data = ExtResource( 4 )
 
 [node name="ItemSlot5" parent="GridContainer" instance=ExtResource( 3 )]
 margin_left = 76.0
 margin_top = 76.0
 margin_right = 148.0
 margin_bottom = 148.0
+weapon_data = ExtResource( 4 )
 
 [node name="ItemSlot6" parent="GridContainer" instance=ExtResource( 3 )]
 margin_left = 152.0
 margin_top = 76.0
 margin_right = 224.0
 margin_bottom = 148.0
+weapon_data = ExtResource( 4 )
 
 [node name="ItemSlot7" parent="GridContainer" instance=ExtResource( 3 )]
 margin_left = 228.0
@@ -85,12 +90,14 @@ margin_left = 76.0
 margin_top = 152.0
 margin_right = 148.0
 margin_bottom = 224.0
+weapon_data = ExtResource( 7 )
 
 [node name="ItemSlot10" parent="GridContainer" instance=ExtResource( 3 )]
 margin_left = 152.0
 margin_top = 152.0
 margin_right = 224.0
 margin_bottom = 224.0
+weapon_data = ExtResource( 7 )
 
 [node name="ItemSlot11" parent="GridContainer" instance=ExtResource( 3 )]
 margin_left = 228.0
@@ -113,9 +120,11 @@ margin_left = 152.0
 margin_top = 228.0
 margin_right = 224.0
 margin_bottom = 300.0
+weapon_data = ExtResource( 7 )
 
 [node name="ItemSlot15" parent="GridContainer" instance=ExtResource( 3 )]
 margin_left = 228.0
 margin_top = 228.0
 margin_right = 300.0
 margin_bottom = 300.0
+weapon_data = ExtResource( 7 )

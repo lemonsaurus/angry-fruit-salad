@@ -8,20 +8,20 @@ script = ExtResource( 2 )
 [node name="Weapons" type="Node2D" parent="."]
 
 [node name="Holder1" type="Position2D" parent="Weapons"]
-position = Vector2( 0, -96 )
+position = Vector2( 0, -48 )
 rotation = -0.785398
 
 [node name="Holder2" type="Position2D" parent="Weapons"]
-position = Vector2( 60, -60 )
+position = Vector2( 36, -24 )
 rotation = -0.383972
 
 [node name="Holder3" type="Position2D" parent="Weapons"]
-position = Vector2( 96, 0 )
+position = Vector2( 48, 0 )
 
 [node name="Holder4" type="Position2D" parent="Weapons"]
-position = Vector2( 60, 60 )
+position = Vector2( 36, 24 )
 rotation = 0.383972
 
 [node name="Holder5" type="Position2D" parent="Weapons"]
-position = Vector2( 0, 96 )
+position = Vector2( 0, 48 )
 rotation = 0.785398

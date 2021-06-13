@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://resources/weapon.gd" type="Script" id=1]
+[ext_resource path="res://art/weapons/Grapeshot_icon.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Weapons/GrapeshotWeapon.tscn" type="PackedScene" id=3]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource( 1 )
+name = "Weapon 3"
+tooltip = "Weapon 3"
+texture = ExtResource( 2 )
+node = ExtResource( 3 )

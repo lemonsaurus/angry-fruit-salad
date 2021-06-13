@@ -1,17 +1,20 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://art/effects/dirt_03.png" type="Texture" id=1]
+[ext_resource path="res://art/effects/grape_splat.png" type="Texture" id=1]
 
 [sub_resource type="Gradient" id=1]
-colors = PoolColorArray( 1, 0.876526, 0.0703125, 1, 0.53125, 0.401875, 0.0581055, 1 )
+offsets = PoolRealArray( 0, 0.378109 )
+colors = PoolColorArray( 0.480469, 0.121994, 0.39085, 1, 0.347656, 0.042099, 0.271267, 1 )
 
-[node name="Explosion" type="CPUParticles2D"]
+[node name="GrapeSplat" type="CPUParticles2D"]
+amount = 4
 lifetime = 2.0
 explosiveness = 0.95
 texture = ExtResource( 1 )
 spread = 180.0
 gravity = Vector2( 0, 0 )
-initial_velocity = 25.0
+initial_velocity = 35.0
+initial_velocity_random = 0.2
 damping = 100.0
 angle = 360.0
 angle_random = 1.0

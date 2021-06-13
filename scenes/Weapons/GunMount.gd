@@ -20,7 +20,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("fire"):
 		for weapon in weapon_slots.keys():
 			if weapon_slots[weapon] != null:
-				weapon_slots[weapon].shoot(get_parent().rotation)
+				weapon_slots[weapon].shoot(rotation)
 		
 func remove_weapon(slot):
 	#Remove weapon from scene and set to null in dict

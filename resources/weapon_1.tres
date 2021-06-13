@@ -2,15 +2,12 @@
 
 [ext_resource path="res://resources/weapon.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Weapons/BananaWeapon.tscn" type="PackedScene" id=2]
-
-[sub_resource type="StreamTexture" id=1]
-flags = 4
-load_path = "res://.import/icon_red.png-2c850d5491cc19ea5e8267a18964546b.stex"
+[ext_resource path="res://art/weapons/Bananagun_icon.png" type="Texture" id=3]
 
 [resource]
 resource_local_to_scene = true
 script = ExtResource( 1 )
 name = "Weapon 1"
 tooltip = "Weapon 1"
-texture = SubResource( 1 )
+texture = ExtResource( 3 )
 node = ExtResource( 2 )

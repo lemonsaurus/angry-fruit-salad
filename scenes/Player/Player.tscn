@@ -1,27 +1,29 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://art/weapons/hitman1_hold.png" type="Texture" id=1]
+[ext_resource path="res://art/player/player_spritesheet.png" type="Texture" id=1]
 [ext_resource path="res://scenes/Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://scenes/Weapons/GunMount.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 16.4047
+radius = 3.91739
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 19.3342, 23.8947 )
+extents = Vector2( 5.7459, 13.8185 )
 
 [node name="Player" type="KinematicBody2D"]
-collision_layer = 2
-collision_mask = 21
+collision_layer = 0
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 1 )
+hframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.412945, 9.96967 )
 shape = SubResource( 1 )
 
 [node name="debug_line" type="Line2D" parent="."]

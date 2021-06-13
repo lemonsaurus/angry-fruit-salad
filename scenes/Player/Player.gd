@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 
 var turn_speed = 9
-var max_move_speed = 500
+var max_move_speed = 250
 var acceleration = .3
 var friction = 0.1
 var velocity = Vector2.ZERO
@@ -45,7 +45,25 @@ func _physics_process(delta):
 		
 	#Only update rotation if mouse is a certain distance from character
 	if (get_global_mouse_position()-global_position).length() > 25:
-		look_at(get_global_mouse_position())
+		$GunMount.look_at(get_global_mouse_position())
+	
+	update_facing(direction)
 		
 	velocity = move_and_slide(velocity)
+	
+func update_facing(direction):
+	
+	var p_sprite = $Sprite
+	#moving right
+	if direction.x > 0:
+		p_sprite.frame = 1
+	#moving left
+	elif direction.x < 0:
+		p_sprite.frame = 3
+	#moving up
+	elif direction.y < 0:
+		p_sprite.frame = 2
+	#moving down
+	elif direction.y > 0:
+		p_sprite.frame = 0
 	
